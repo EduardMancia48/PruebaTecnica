@@ -1,0 +1,16 @@
+# Ignorar carpetas de Visual Studio
+.vs/
+*.user
+*.suo
+*.VC.db
+
+# Ignorar binarios y compilados
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.cache
+
+# Otros
+*.log

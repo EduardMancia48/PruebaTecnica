@@ -1,0 +1,81 @@
+﻿@model IEnumerable<AppDC_Deras.Models.Reclamo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreProveedor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DireccionProveedor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombresConsumidor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApellidosConsumidor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DUI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DetalleReclamo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoReclamado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaIngreso)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreProveedor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DireccionProveedor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombresConsumidor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApellidosConsumidor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DUI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DetalleReclamo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoReclamado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaIngreso)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdReclamo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdReclamo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdReclamo })
+        </td>
+    </tr>
+}
+
+</table>
